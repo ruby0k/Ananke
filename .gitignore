@@ -3,3 +3,4 @@
 .offload/
 __pycache__/
 results/
+uv.lock
