@@ -1,0 +1,95 @@
+{
+  "timestamp_utc": "2026-07-02T13:04:14.123417+00:00",
+  "model": "openai/gpt-oss-20b",
+  "active_experts": 4,
+  "load": {
+    "type": "llm",
+    "instance_id": "openai/gpt-oss-20b",
+    "load_time_seconds": 38.102,
+    "status": "loaded",
+    "load_config": {
+      "context_length": 4096,
+      "eval_batch_size": 1024,
+      "physical_batch_size": 256,
+      "parallel": 1,
+      "flash_attention": true,
+      "speculative_draft_mtp": false,
+      "speculative_draft_simple": false,
+      "speculative_draft_model": "",
+      "speculative_draft_max_tokens": 16,
+      "speculative_draft_min_tokens": 0,
+      "speculative_draft_min_continue_probability": 0.75,
+      "num_experts": 4,
+      "offload_kv_cache_to_gpu": true
+    }
+  },
+  "summary": {
+    "pass_rate": 1.0,
+    "mean_tokens_per_second": 21.077450620667207,
+    "mean_time_to_first_token": 0.7136666666666667,
+    "mean_repetition_score": 0.0,
+    "parser_failures": 0
+  },
+  "cases": [
+    {
+      "id": "capital",
+      "passed": true,
+      "tokens_per_second": 22.393495874986332,
+      "time_to_first_token": 2.587,
+      "completion_tokens": 17,
+      "repetition_score": 0.0,
+      "reasoning": "Need to output \"Paris\".",
+      "output": "Paris"
+    },
+    {
+      "id": "multiply",
+      "passed": true,
+      "tokens_per_second": 21.739666049743256,
+      "time_to_first_token": 0.306,
+      "completion_tokens": 30,
+      "repetition_score": 0.0,
+      "reasoning": "Compute 17*19 = (20-3)*19 =380-57=323.",
+      "output": "323"
+    },
+    {
+      "id": "decimal",
+      "passed": true,
+      "tokens_per_second": 21.00254929534968,
+      "time_to_first_token": 0.401,
+      "completion_tokens": 71,
+      "repetition_score": 0.0,
+      "reasoning": "We need to compare 9.11 vs 9.9. 9.9 > 9.11 because 9.9 = 9 + 0.9; 9.11 = 9 + 0.11. So answer: 9.9.",
+      "output": "9.9"
+    },
+    {
+      "id": "code",
+      "passed": true,
+      "tokens_per_second": 21.086796449153876,
+      "time_to_first_token": 0.385,
+      "completion_tokens": 99,
+      "repetition_score": 0.0,
+      "reasoning": "Need single line def with return. Use lambda? But name is is_even. So:\n\ndef is_even(n): return n%2==0\n\nThat's one line after def? Actually two lines: def and return. Could use single line by putting everything on same line: def is_even(n): return n%2==0\n\nThat's fine.",
+      "output": "```python\ndef is_even(n): return n % 2 == 0\n```\n"
+    },
+    {
+      "id": "science",
+      "passed": true,
+      "tokens_per_second": 20.340996464734815,
+      "time_to_first_token": 0.296,
+      "completion_tokens": 65,
+      "repetition_score": 0.0,
+      "reasoning": "Need brief explanation: Rayleigh scattering preferentially scatters shorter wavelengths (blue). Provide one sentence.",
+      "output": "The daytime sky appears blue because sunlight’s short‑wavelength blue light is scattered more efficiently by air molecules than longer wavelengths, so we see that scattered light from all directions."
+    },
+    {
+      "id": "instruction",
+      "passed": true,
+      "tokens_per_second": 19.901199590035286,
+      "time_to_first_token": 0.307,
+      "completion_tokens": 22,
+      "repetition_score": 0.0,
+      "reasoning": "User wants \"ANANKE\" only.",
+      "output": "ANANKE"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+[project]
+name = "ananke"
+version = "0.1.0"
+description = "GPT-OSS-20B architecture and weight-mapping experiments"
+requires-python = ">=3.12"
+dependencies = [
+    "accelerate>=1.10.0",
+    "kernels>=0.11.0,<0.15",
+    "safetensors>=0.6.0",
+    "torch==2.12.1+cu130",
+    "transformers>=5.0.0",
+    "triton-windows>=3.7,<3.8; sys_platform == 'win32'",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu130" }

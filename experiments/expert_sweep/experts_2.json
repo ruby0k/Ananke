@@ -1,0 +1,95 @@
+{
+  "timestamp_utc": "2026-07-02T13:03:01.650112+00:00",
+  "model": "openai/gpt-oss-20b",
+  "active_experts": 2,
+  "load": {
+    "type": "llm",
+    "instance_id": "openai/gpt-oss-20b",
+    "load_time_seconds": 26.959,
+    "status": "loaded",
+    "load_config": {
+      "context_length": 4096,
+      "eval_batch_size": 1024,
+      "physical_batch_size": 256,
+      "parallel": 1,
+      "flash_attention": true,
+      "speculative_draft_mtp": false,
+      "speculative_draft_simple": false,
+      "speculative_draft_model": "",
+      "speculative_draft_max_tokens": 16,
+      "speculative_draft_min_tokens": 0,
+      "speculative_draft_min_continue_probability": 0.75,
+      "num_experts": 2,
+      "offload_kv_cache_to_gpu": true
+    }
+  },
+  "summary": {
+    "pass_rate": 1.0,
+    "mean_tokens_per_second": 23.681079951843458,
+    "mean_time_to_first_token": 0.6306666666666666,
+    "mean_repetition_score": 0.0,
+    "parser_failures": 0
+  },
+  "cases": [
+    {
+      "id": "capital",
+      "passed": true,
+      "tokens_per_second": 24.216679451648904,
+      "time_to_first_token": 2.449,
+      "completion_tokens": 34,
+      "repetition_score": 0.0,
+      "reasoning": "We need to answer: \"France\" capital is Paris. Provide only the city name. So output \"Paris\".",
+      "output": "Paris"
+    },
+    {
+      "id": "multiply",
+      "passed": true,
+      "tokens_per_second": 23.966245939219206,
+      "time_to_first_token": 0.229,
+      "completion_tokens": 20,
+      "repetition_score": 0.0,
+      "reasoning": "Compute 17*19 = 323.",
+      "output": "323"
+    },
+    {
+      "id": "decimal",
+      "passed": true,
+      "tokens_per_second": 24.02259889221501,
+      "time_to_first_token": 0.308,
+      "completion_tokens": 49,
+      "repetition_score": 0.0,
+      "reasoning": "We need to output just the larger value. Compare 9.11 vs 9.9. Obviously 9.9 is larger. So answer: 9.9.",
+      "output": "9.9"
+    },
+    {
+      "id": "code",
+      "passed": true,
+      "tokens_per_second": 23.218799525770176,
+      "time_to_first_token": 0.294,
+      "completion_tokens": 82,
+      "repetition_score": 0.0,
+      "reasoning": "Need to return boolean quickly. Provide lambda? But function name is_even. So def is_even(n): return n%2==0.",
+      "output": "```python\ndef is_even(n): return n % 2 == 0\n```\nThis single line defines `is_even` that returns `True` when `n` is even and `False` otherwise."
+    },
+    {
+      "id": "science",
+      "passed": true,
+      "tokens_per_second": 23.187013143995536,
+      "time_to_first_token": 0.229,
+      "completion_tokens": 61,
+      "repetition_score": 0.0,
+      "reasoning": "We need to explain why daytime sky is blue. Provide a concise explanation. Let's answer.",
+      "output": "Because Earth’s atmosphere scatters the shorter‑wavelength (blue) components of sunlight more efficiently than longer wavelengths, leaving the sky illuminated predominantly by scattered blue light."
+    },
+    {
+      "id": "instruction",
+      "passed": true,
+      "tokens_per_second": 23.475142758211902,
+      "time_to_first_token": 0.275,
+      "completion_tokens": 24,
+      "repetition_score": 0.0,
+      "reasoning": "We need to reply \"ANANKE\" only.",
+      "output": "ANANKE"
+    }
+  ]
+}

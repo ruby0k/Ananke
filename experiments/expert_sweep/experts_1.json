@@ -1,0 +1,90 @@
+{
+  "timestamp_utc": "2026-07-02T13:02:04.597094+00:00",
+  "model": "openai/gpt-oss-20b",
+  "active_experts": 1,
+  "load": {
+    "type": "llm",
+    "instance_id": "openai/gpt-oss-20b",
+    "load_time_seconds": 20.511,
+    "status": "loaded",
+    "load_config": {
+      "context_length": 4096,
+      "eval_batch_size": 1024,
+      "physical_batch_size": 256,
+      "parallel": 1,
+      "flash_attention": true,
+      "speculative_draft_mtp": false,
+      "speculative_draft_simple": false,
+      "speculative_draft_model": "",
+      "speculative_draft_max_tokens": 16,
+      "speculative_draft_min_tokens": 0,
+      "speculative_draft_min_continue_probability": 0.75,
+      "num_experts": 1,
+      "offload_kv_cache_to_gpu": true
+    }
+  },
+  "summary": {
+    "pass_rate": 0.0,
+    "mean_tokens_per_second": 31.975475691686533,
+    "mean_time_to_first_token": 0.5132,
+    "mean_repetition_score": 0.0,
+    "parser_failures": 1
+  },
+  "cases": [
+    {
+      "id": "capital",
+      "passed": false,
+      "tokens_per_second": 32.432432432432435,
+      "time_to_first_token": 1.79,
+      "completion_tokens": 128,
+      "repetition_score": 0.0,
+      "reasoning": "",
+      "output": " W| (??   The reconomics  수한이 등ू 하 수 가리보로이니 에시   개요번락위 수업카스-산정지 미 개 소화전파이능드연성신  **수집자  사료나 해다수러\nWe’re 요기 경아 w 개하 계 창? The 저는 세 개이 로마나오 .. 이  개시마스-.. 간"
+    },
+    {
+      "id": "multiply",
+      "passed": false,
+      "tokens_per_second": 32.03026481715006,
+      "time_to_first_token": 0.18,
+      "completion_tokens": 128,
+      "repetition_score": 0.0,
+      "reasoning": "",
+      "output": " (pre)???: Let's re‑ **‐s…** P… \n\nWe need to produce a very brief (≤ ‑)-type ... etc.\n\nThe user says: \"Sure, here's this and anh\".\n\nWill not answer; but we can do something else? They didn't ask the question. We have no content. So the assistant should refuse or say short apology. But guidelines: We must respond with a single apology: \"I'm sorry, I'm unable to help with that.\" That is the only message.\n\nThus final answer: The user wants us to produce a response but not necessary. So we output:"
+    },
+    {
+      "id": "decimal",
+      "passed": false,
+      "tokens_per_second": 32.18449062341612,
+      "time_to_first_token": 0.211,
+      "completion_tokens": 128,
+      "repetition_score": 0.0,
+      "reasoning": "",
+      "output": " (1))\nThe user asks: \"Which of these values are from the prompt? Which one do we want? – The  let’s end? The final answer.\n\nWe have a channel?\n\nBut…is “.../.. ……..on ionice……-**…..**………..??…...\n\nWait, **[i.e] 9-?…??–.. \n\nI apologize…..\"\n\nThe content appears garbled. The user says: ...\n\nIt’s the full text? It read more...?? (This is so……..…\n\nWe have we’re going"
+    },
+    {
+      "id": "code",
+      "passed": false,
+      "error": "{\"error\":\"The model produced output that does not match the expected Content-only format\"}"
+    },
+    {
+      "id": "science",
+      "passed": false,
+      "tokens_per_second": 31.93361830525522,
+      "time_to_first_token": 0.185,
+      "completion_tokens": 128,
+      "repetition_score": 0.0,
+      "reasoning": "",
+      "output": " (?)\n\n\n\nThe user is asking to explain something about a scientific name of *nix...??? The asked thx?… (?? full ? th?  — 8 .. 2 ? 1 - t \"4 femto - the ..??? be Am deutsch fingers de ‐ ... **/ \n\n\n\nSo the assistant just replies?— ……...\n\nThe user wants to read a \"???\"..???\n\nOk, what BEC...\n\nIt seems that this is......\nOk so"
+    },
+    {
+      "id": "instruction",
+      "passed": false,
+      "tokens_per_second": 31.29657228017884,
+      "time_to_first_token": 0.2,
+      "completion_tokens": 128,
+      "repetition_score": 0.0,
+      "reasoning": "",
+      "output": " (a......…อ?\n\n\n\n... [ ...] \n\nThe system…??It seems that...…...... Next? **(1)**\n\nI apologize…….**Weird layer de forty‑? …)  dis…\n\nThis …  – **……re‑**<...  “”  ~\\n etc..… uh…… …  ?? ⚜ – ‐ … \n\n\n\nWe……\n\n\n\nThe ask: .../??correspond‑a…  **bim   ! s…………"
+    }
+  ]
+}

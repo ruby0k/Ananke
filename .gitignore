@@ -1,0 +1,5 @@
+.idea/
+.venv/
+.offload/
+__pycache__/
+results/
