@@ -1,0 +1,13 @@
+{
+  "model": "v11-experts23",
+  "parallel": 4,
+  "elapsed_seconds": 15.087416999987909,
+  "completion_tokens": 1024,
+  "aggregate_tokens_per_second": 67.87112731097845,
+  "stream_tokens_per_second": [
+    23.552230534774175,
+    23.54788069073783,
+    23.530497370120884,
+    23.55440605948642
+  ]
+}

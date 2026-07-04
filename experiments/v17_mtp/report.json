@@ -1,0 +1,7 @@
+{
+  "model": "v11-experts23",
+  "status": "unsupported",
+  "error": "MTP speculative decoding requires a GGUF model with a bundled supported MTP head",
+  "runtime": "LM Studio / llama.cpp",
+  "reason": "The GPT-OSS openai-moe graph has no MTP graph or MTP tensor schema"
+}

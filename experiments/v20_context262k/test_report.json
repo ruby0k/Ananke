@@ -1,0 +1,19 @@
+{
+  "model": "v20-context262k",
+  "status": "loads_and_generates",
+  "context_length": 262144,
+  "active_experts": 2,
+  "rope_type": "yarn",
+  "rope_factor": 64.0,
+  "short_smoke": {
+    "prompt": "What is 17 multiplied by 19? Answer with only the number.",
+    "output": "323",
+    "passed": true,
+    "tokens_per_second": 7.472495076342286,
+    "time_to_first_token": 5.467,
+    "prompt_tokens": 82
+  },
+  "vram_used_mib": 7549,
+  "vram_free_mib": 362,
+  "beyond_131k_retrieval_tested": false
+}

@@ -1,0 +1,21 @@
+0.00.104.007 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.185.074 I srv          init: The UI is disabled
+0.00.185.082 I srv          init: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+0.00.188.071 I srv    load_model: loading model 'D:\Hegemony\Ananke\experiments\v11_experts23\ananke-v11-experts23-head-q8.gguf'
+0.00.449.355 W load: setting token '<|message|>' (63989) attribute to USER_DEFINED (16), old attributes: 8
+0.00.449.934 W load: setting token '<|channel|>' (63986) attribute to USER_DEFINED (16), old attributes: 8
+0.00.450.003 W load: setting token '<|constrain|>' (63984) attribute to USER_DEFINED (16), old attributes: 8
+0.00.450.072 W load: setting token '<|start|>' (63987) attribute to USER_DEFINED (16), old attributes: 8
+0.00.450.109 W load: special_eog_ids contains both '<|return|>' and '<|call|>', or '<|calls|>' and '<|flush|>' tokens, removing '<|end|>' token from EOG list
+0.02.558.992 W sched_reserve: layer 0 is assigned to device CPU but the Flash Attention tensor is assigned to device CUDA0 (usually due to missing support)
+0.02.559.002 W sched_reserve: Flash Attention was auto, set to disabled
+0.03.066.681 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 4096, kv_unified = 'false'
+0.03.071.792 I srv  llama_server: model loaded
+0.03.071.803 I srv  llama_server: listening on http://127.0.0.1:1242
+0.03.214.020 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+0.03.214.058 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+0.06.400.261 I slot print_timing: id  0 | task 0 | prompt eval time =     453.93 ms /     9 tokens (   50.44 ms per token,    19.83 tokens per second)
+0.06.400.270 I slot print_timing: id  0 | task 0 |        eval time =    2732.24 ms /    64 tokens (   42.69 ms per token,    23.42 tokens per second)
+0.06.400.271 I slot print_timing: id  0 | task 0 |       total time =    3186.17 ms /    73 tokens
+0.06.400.272 I slot print_timing: id  0 | task 0 |    graphs reused =         63
+0.06.400.296 I slot      release: id  0 | task 0 | stop processing: n_tokens = 72, truncated = 0

@@ -1,0 +1,95 @@
+{
+  "timestamp_utc": "2026-07-03T20:23:10.258575+00:00",
+  "model": "ananke-20b-v1",
+  "active_experts": 4,
+  "load": {
+    "type": "llm",
+    "instance_id": "ananke-20b-v1",
+    "load_time_seconds": 40.814,
+    "status": "loaded",
+    "load_config": {
+      "context_length": 4096,
+      "eval_batch_size": 2048,
+      "physical_batch_size": 512,
+      "parallel": 4,
+      "flash_attention": true,
+      "speculative_draft_mtp": false,
+      "speculative_draft_simple": false,
+      "speculative_draft_model": "",
+      "speculative_draft_max_tokens": 16,
+      "speculative_draft_min_tokens": 0,
+      "speculative_draft_min_continue_probability": 0.75,
+      "num_experts": 4,
+      "offload_kv_cache_to_gpu": true
+    }
+  },
+  "summary": {
+    "pass_rate": 1.0,
+    "mean_tokens_per_second": 17.90008504731191,
+    "mean_time_to_first_token": 0.8959999999999999,
+    "mean_repetition_score": 0.0,
+    "parser_failures": 0
+  },
+  "cases": [
+    {
+      "id": "capital",
+      "passed": true,
+      "tokens_per_second": 18.18856932706286,
+      "time_to_first_token": 3.07,
+      "completion_tokens": 41,
+      "repetition_score": 0.0,
+      "reasoning": "The user asks: \"What is the capital of France? Answer with only the city.\" So answer should just be \"Paris\". No extra text.",
+      "output": "Paris"
+    },
+    {
+      "id": "multiply",
+      "passed": true,
+      "tokens_per_second": 17.856040717983632,
+      "time_to_first_token": 0.423,
+      "completion_tokens": 46,
+      "repetition_score": 0.0,
+      "reasoning": "The user asks: \"What is 17 multiplied by 19? Answer with only the number.\" So compute 17*19 = 323. Provide just the number.",
+      "output": "323"
+    },
+    {
+      "id": "decimal",
+      "passed": true,
+      "tokens_per_second": 17.884518545966287,
+      "time_to_first_token": 0.544,
+      "completion_tokens": 96,
+      "repetition_score": 0.0,
+      "reasoning": "The user asks: \"Which is larger, 9.11 or 9.9? Answer with only the larger value.\" So we need to output just the larger number. Compare 9.11 vs 9.9. 9.9 > 9.11 because 9.9 = 9.90 which is greater than 9.11. So answer: 9.9.",
+      "output": "9.9"
+    },
+    {
+      "id": "code",
+      "passed": true,
+      "tokens_per_second": 17.76968573627326,
+      "time_to_first_token": 0.57,
+      "completion_tokens": 78,
+      "repetition_score": 0.0,
+      "reasoning": "The user wants a one-line Python function named is_even that returns whether n is even. So something like:\n\ndef is_even(n): return n % 2 == 0\n\nThat's it. Probably they want exactly that. Provide the code.",
+      "output": "```python\ndef is_even(n): return n % 2 == 0\n```\n"
+    },
+    {
+      "id": "science",
+      "passed": true,
+      "tokens_per_second": 17.809563876034215,
+      "time_to_first_token": 0.402,
+      "completion_tokens": 128,
+      "repetition_score": 0.0,
+      "reasoning": "We need to explain in one sentence why daytime sky appears blue. The answer should mention Rayleigh scattering of shorter wavelengths by air molecules. So something like: \"Because sunlight contains all colors, but the Earth's atmosphere scatters short-wavelength blue light more efficiently than longer wavelengths, making the sky appear blue.\" That is a concise explanation. Ensure it's one sentence. Let's produce that.",
+      "output": "The daytime sky looks blue because sunlight’s shorter‑wavelength (blue) photons are scattered far more efficiently by air molecules than longer wavelengths, so most of the light we see from any direction in the sky is"
+    },
+    {
+      "id": "instruction",
+      "passed": true,
+      "tokens_per_second": 17.89213208055121,
+      "time_to_first_token": 0.367,
+      "completion_tokens": 43,
+      "repetition_score": 0.0,
+      "reasoning": "The user says: \"Reply with exactly ANANKE and nothing else.\" So we should output \"ANANKE\" only. No other text.",
+      "output": "ANANKE"
+    }
+  ]
+}

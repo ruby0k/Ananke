@@ -1,0 +1,24 @@
+0.00.117.133 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.216.635 I srv          init: The UI is disabled
+0.00.216.640 I srv          init: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+0.00.228.272 I srv    load_model: loading model 'D:\Hegemony\Ananke\experiments\v3_head_q8\ananke-v3-vocab64k-head-q8.gguf'
+0.00.381.262 W common_fit_params: failed to fit params to free device memory: n_gpu_layers already set by user to 14, abort
+0.00.489.211 W load: setting token '<|message|>' (63989) attribute to USER_DEFINED (16), old attributes: 8
+0.00.489.717 W load: setting token '<|channel|>' (63986) attribute to USER_DEFINED (16), old attributes: 8
+0.00.489.779 W load: setting token '<|constrain|>' (63984) attribute to USER_DEFINED (16), old attributes: 8
+0.00.489.849 W load: setting token '<|start|>' (63987) attribute to USER_DEFINED (16), old attributes: 8
+0.00.489.887 W load: special_eog_ids contains both '<|return|>' and '<|call|>', or '<|calls|>' and '<|flush|>' tokens, removing '<|end|>' token from EOG list
+0.14.027.549 W sched_reserve: layer 0 is assigned to device CPU but the Flash Attention tensor is assigned to device CUDA0 (usually due to missing support)
+0.14.030.681 W sched_reserve: Flash Attention was auto, set to disabled
+0.41.501.403 I srv    load_model: initializing, n_slots = 4, n_ctx_slot = 4096, kv_unified = 'true'
+0.41.521.256 I srv  llama_server: model loaded
+0.41.521.268 I srv  llama_server: listening on http://127.0.0.1:1235
+1.39.123.023 I slot get_availabl: id  3 | task -1 | selected slot by LRU, t_last = -1
+1.39.123.285 I slot launch_slot_: id  3 | task 0 | processing task, is_child = 0
+1.50.388.715 I slot print_timing: id  3 | task 0 | prompt processing, n_tokens =     62, progress = 0.76, t =  11.27 s / 5.50 tokens per second
+1.53.243.785 I slot print_timing: id  3 | task 0 | prompt processing, n_tokens =     78, progress = 0.95, t =  14.12 s / 5.52 tokens per second
+1.56.888.818 I slot print_timing: id  3 | task 0 | prompt eval time =   15953.69 ms /    82 tokens (  194.56 ms per token,     5.14 tokens per second)
+1.56.888.827 I slot print_timing: id  3 | task 0 |        eval time =    1811.80 ms /    49 tokens (   36.98 ms per token,    27.04 tokens per second)
+1.56.888.828 I slot print_timing: id  3 | task 0 |       total time =   17765.49 ms /   131 tokens
+1.56.888.829 I slot print_timing: id  3 | task 0 |    graphs reused =         48
+1.56.888.885 I slot      release: id  3 | task 0 | stop processing: n_tokens = 130, truncated = 0

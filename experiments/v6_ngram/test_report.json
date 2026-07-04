@@ -1,0 +1,66 @@
+{
+  "none": {
+    "summary": {
+      "mean_tokens_per_second": 23.524566190597668,
+      "mean_draft_acceptance": null
+    },
+    "cases": [
+      {
+        "id": "capital",
+        "tokens_per_second": 19.067427039905592,
+        "tokens": 128,
+        "output": " 1. Paris 2. London 3. Berlin 4. Rome 5. Madrid. The correct answer is 1. Paris. The answer should be only one line? The answer is: \"Paris\". \nThe user: \"What is the capital of France? Answer with only the city.\" They want \"Paris\". So the answer: \"Paris\". \nThe user: \"What is the capital of France? The correct answer is 1. Paris.\" \nWe need to answer with only the correct? The user says: \"Answer with only the city.\" So \"Paris.\" \nWe need to do? The"
+      },
+      {
+        "id": "multiply",
+        "tokens_per_second": 25.41369726806725,
+        "tokens": 128,
+        "output": " 17 x 19 = 323.\"\n\nSure! Here's a short and sweet script for a TikTok video:\n\n[Opening shot of a person holding a calculator]\n\nPerson: Hey TikTok! Want to know the answer to 17 multiplied by 19? It's 323! \n\n[Cut to a close-up shot of the calculator as the person types in the numbers]\n\nPerson: That's right, 17 times 19 equals 323. \n\n[Cut to a shot of the person holding up a sign that says \"Math is fun!\"]\n\nPerson: So next time you're feeling stuck on a math problem, just remember that "
+      },
+      {
+        "id": "copy_text",
+        "tokens_per_second": 23.79423194357049,
+        "tokens": 128,
+        "output": " The answer is: \"The rain in Spain falls...\" etc.\n\nWe need to produce a single line of text that is exactly the same as the input line. The input line is: \"The rain in Spain falls mainly on the plain, and the train returns again.\" The output should be exactly that string. The problem says: \"The output should be a single line of text that is exactly the same as the input line.\" So we need to output exactly that line. The input line is: The rain in Spain falls mainly on the plain, and the train returns again. So we output that. The problem says \"The output should"
+      },
+      {
+        "id": "copy_code",
+        "tokens_per_second": 25.822908510847338,
+        "tokens": 128,
+        "output": "  # This will print each item twice\n\n```\n\nBut we can't use `for item in items: print(item)` again? That would produce 2 prints each; but we want 1 each. So we can't.\n\nBut we can use `for item in items: print(item)` again but with `if` to skip prints? Not.\n\nBut we can use `for item in items: print(item)` again but with `if` to skip prints? Not.\n\nBut we can use `for item in items: print(item)` again but with `if` to skip prints? Not.\n\nBut we can use `for item in"
+      }
+    ]
+  },
+  "ngram-simple": {
+    "summary": {
+      "mean_tokens_per_second": 20.642765764183537,
+      "mean_draft_acceptance": 0.31868131868131866
+    },
+    "cases": [
+      {
+        "id": "capital",
+        "tokens_per_second": 8.950906863226717,
+        "tokens": 128,
+        "output": " 1. Paris 2. London 3. Berlin 4. Rome 5. Madrid. The correct answer is 1. Paris. The answer should be only one line? The answer is: \"Paris\". \nThe user: \"What is the capital of France? Answer with only the city.\" They want \"Paris\". So the answer: \"Paris\". \nThe user: \"What is the capital of France? The correct answer is 1. Paris.\" \nWe need to answer: The correct? The user is asking: The correct? The? \nThe user: ...? \nThe user? The? The"
+      },
+      {
+        "id": "multiply",
+        "tokens_per_second": 19.841162196075636,
+        "tokens": 128,
+        "output": " 17 x 19 = 323.\"\n\nSure! Here's a short and sweet script for a TikTok video:\n\n[Opening shot of a person holding a calculator]\n\nPerson: Hey TikTok! Want to know the answer to 17 multiplied by 19? It's 323! \n\n[Cut to a close-up shot of the calculator as the person types in the numbers]\n\nPerson: That's right, 17 times 19 equals 323. \n\n[Cut to a shot of the person holding up a sign that says \"Math is fun!\"]\n\nPerson: So next time you're feeling stuck on a math problem, just remember that "
+      },
+      {
+        "id": "copy_text",
+        "tokens_per_second": 17.823442923835554,
+        "tokens": 128,
+        "output": " The answer is: \"The rain in Spain falls...\" etc.\n\nWe need to produce a single line of text that is exactly the same as the input line. The input line is: \"The rain in Spain falls mainly on the plain, and the train returns again.\" The output should be exactly that string. The problem says: \"The output should be a single line of text that is exactly the same as the input line.\" So we need to output exactly that line. The input line is: The rain in Spain falls mainly on the plain, and the train returns again. So we output that. The problem says \"The output should"
+      },
+      {
+        "id": "copy_code",
+        "tokens_per_second": 35.95555107359624,
+        "tokens": 128,
+        "output": "  # This will print each item twice\n\n```\n\nBut we can't use `for item in items: print(item)` again? That would produce 2 prints each; but we want 1 each. So we can't.\n\nBut we can use `for item in items: print(item)` again but with `if` to skip prints? Not.\n\nBut we can use `for item in items: print(item)` again but with `if` to skip prints? Not.\n\nBut we can use `for item in items: print(item)` again but with `if` to skip prints? Not.\n\nBut we can use `for item in"
+      }
+    ]
+  }
+}

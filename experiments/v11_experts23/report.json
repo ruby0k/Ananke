@@ -1,0 +1,50 @@
+{
+  "model": "v11-experts23",
+  "smoke_pass_rate": 0.6666666666666666,
+  "mean_tokens_per_second": 37.05772031607438,
+  "cases": [
+    {
+      "id": "capital",
+      "passed": true,
+      "tokens_per_second": 37.27159899872205,
+      "output": "<|start|>final<|message|>Paris"
+    },
+    {
+      "id": "multiply",
+      "passed": true,
+      "tokens_per_second": 38.691789856743654,
+      "output": "<|start|>final<|message|>323"
+    },
+    {
+      "id": "decimal",
+      "passed": true,
+      "tokens_per_second": 36.025163576758366,
+      "output": "<|start|>final<|message|>9.9"
+    },
+    {
+      "id": "code",
+      "passed": false,
+      "tokens_per_second": 36.41816623821765,
+      "output": ""
+    },
+    {
+      "id": "science",
+      "passed": true,
+      "tokens_per_second": 36.915017820285385,
+      "output": "<|start|>final<|message|>**The daytime sky appears blue because the Earth’s atmospheric particles scatter the sun’s light, and the shorter‑blue wavelengths are preferentially scattered into the sky, giving it a bright blue color.**"
+    },
+    {
+      "id": "instruction",
+      "passed": false,
+      "tokens_per_second": 37.02458540571919,
+      "output": "<|start|>final<|message|>ANANKE"
+    }
+  ],
+  "context": {
+    "passed": false,
+    "output": "",
+    "prompt_tokens": 3174,
+    "time_to_first_token": 2.382,
+    "tokens_per_second": 29.596830575623397
+  }
+}

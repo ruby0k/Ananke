@@ -34,6 +34,16 @@ The packed MXFP4 expert tensors remain packed. Their execution kernel is the int
 architecture boundary; attention, routing, normalization, embeddings, and tensor ownership are
 already represented directly in Ananke.
 
+Current weight-compatible controls:
+
+- fixed top-2 routing (default),
+- adaptive top-2/top-4 routing via router confidence,
+- prompt-calibrated layer masks that never skip consecutive blocks and remain fixed during cached generation.
+
+```powershell
+uv run python architecture.py --expert-mode adaptive --expert-confidence 0.8 --layer-skip-threshold 0.05
+```
+
 ## Experiments
 
 Run the first controlled architectural ablation: one, two, and four active experts with fixed
@@ -44,3 +54,23 @@ uv run python experiment_experts.py
 ```
 
 Per-run JSON and a comparison table are written under `experiments/expert_sweep/`.
+
+Benchmark the original safetensors loaded directly through PyTorch/Transformers (not LM Studio):
+
+```powershell
+lms unload --all
+uv run python benchmark_weights.py
+```
+
+Generate through the executable Ananke subclass with mapped weights and canonical MXFP4 kernels:
+
+```powershell
+lms unload --all
+uv run python generate.py --experts 2
+```
+
+Build a push-ready Hugging Face repository under `dist/ananke-gpt-oss-20b-top2/`:
+
+```powershell
+uv run python export_hf.py
+```

@@ -1,0 +1,4 @@
+{
+  "status": "unsupported_in_standard_gguf",
+  "reason": "llama.cpp GPT-OSS infers the alternating full/sliding layer pattern; GGUF stores only the global sliding-window size, not a per-layer attention map."
+}

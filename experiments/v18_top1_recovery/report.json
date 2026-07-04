@@ -1,0 +1,13 @@
+{
+  "status": "router_only_recovery_rejected",
+  "top1_weight": 1.0,
+  "router_gradient": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "reason": "softmax over one selected expert is constant, so router-only top-1 recovery has zero gradient",
+  "required_next": "train non-router adapters or expert/transformer weights from a trainable checkpoint"
+}

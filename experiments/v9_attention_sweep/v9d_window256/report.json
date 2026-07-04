@@ -1,0 +1,50 @@
+{
+  "model": "v9d-window256",
+  "smoke_pass_rate": 0.5,
+  "mean_tokens_per_second": 33.969282871494784,
+  "cases": [
+    {
+      "id": "capital",
+      "passed": true,
+      "tokens_per_second": 34.75991903256193,
+      "output": "<|start|>answerParis"
+    },
+    {
+      "id": "multiply",
+      "passed": true,
+      "tokens_per_second": 33.34205020920502,
+      "output": "<|start|>assent322? Actually wait, 17*19 = 17*10 + 7*9? Let's compute: 17 * 19 = (10+7)*19? Let's do properly: 17*19 = 17*10 + 17*9? 17*10=170; 17*9=153; sum = 323. So answer is 322? No, it's 17*19 = 17*19 = 17*19 = 17*19 = 17*19? Let's do properly: 17 * 19 = 272? Actually 17*19 = 323. So answer 323. But we need to check if any constraints: The user says \"Answer with only the number.\" So output 322? No, it's 323.\n\nSo final 323\n\nBut maybe they want 323. So I will produce 323"
+    },
+    {
+      "id": "decimal",
+      "passed": true,
+      "tokens_per_second": 34.54962642530919,
+      "output": "<|start|>asshellary<|message|>9.9\n\nWe need to ensure it's just the number. The instruction says \"Answer with only the larger value.\" So output should be 9.9. That is correct.<|start|>final<|message|>9.9"
+    },
+    {
+      "id": "code",
+      "passed": false,
+      "tokens_per_second": 33.627851773704336,
+      "output": ""
+    },
+    {
+      "id": "science",
+      "passed": false,
+      "tokens_per_second": 33.78826023585531,
+      "output": ""
+    },
+    {
+      "id": "instruction",
+      "passed": false,
+      "tokens_per_second": 33.747989552332925,
+      "output": "<|start|>assfinal<|message|>ANANKE"
+    }
+  ],
+  "context": {
+    "passed": false,
+    "output": " # Short? ( **?? **... etc..  ... ... ...? (… (? etc????????????????????? ... ... ...? etc???? **??...\nWe need to? etc \n—–‑…… **? **?? \n?????..???????? ** (... \n...  <...???? ... ... ...….. \nWe are *??? **? **? \n... (?? ( **?……….. \n?",
+    "prompt_tokens": 3174,
+    "time_to_first_token": 2.885,
+    "tokens_per_second": 28.041510267167144
+  }
+}

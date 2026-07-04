@@ -1,0 +1,146 @@
+{
+  "v1_vocab64k": {
+    "model": "ananke-v1-vocab64k",
+    "gpu_offload": 0.6,
+    "summary": {
+      "pass_rate": 0.8333333333333334,
+      "mean_tokens_per_second": 17.762047550810376,
+      "mean_characters_per_second": 14.931631906048503,
+      "parser_failures": 0
+    },
+    "cases": [
+      {
+        "id": "capital",
+        "passed": true,
+        "output": "<|start|>associateParis",
+        "reasoning": "We need to answer: \"What is the capital of France?\" The user says: \"Answer with only the city.\" So we should respond with just \"Paris\". No other text. That is straightforward.\n\nBut let's double-check: They want the capital of France, which is Paris. Provide only the city name. So output: \"Paris\".",
+        "completion_tokens": 80,
+        "tokens_per_second": 15.926134587781869,
+        "characters_per_second": 4.625905068382944,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "multiply",
+        "passed": true,
+        "output": "<|start|>associate323",
+        "reasoning": "We need to answer: \"What is 17 multiplied by 19?\" The user says: \"Answer with only the number.\" So we should compute 17 * 19 = 323. Provide only that number, no explanation. Let's do it.",
+        "completion_tokens": 62,
+        "tokens_per_second": 16.869320718709247,
+        "characters_per_second": 5.813953488372093,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "decimal",
+        "passed": true,
+        "output": "9.9",
+        "reasoning": "We need to answer which is larger between 9.11 and 9.9. Compare: 9.9 > 9.11 because 9.9 = 9.90. So 9.90 > 9.11. The question: \"Answer with only the larger value.\" So we should output just \"9.9\".",
+        "completion_tokens": 86,
+        "tokens_per_second": 16.84046285424697,
+        "characters_per_second": 0.5947660586835845,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "code",
+        "passed": true,
+        "output": "<|start|>Here’s a compact, single‑line implementation:\n\n**Using a regular function definition**\n\n> `def is_even(n): return n % 2 == 0`\n\n**Or, equivalently, using a lambda**\n\n> `is_even = lambda n: n % 2 == 0`\n\nBoth versions give you an `",
+        "reasoning": "The user asks: \"Write a one-line Python function named is_even that returns whether n is even.\" They want a single line function definition, presumably using lambda or def with expression? The simplest: `def is_even(n): return n % 2 == 0`. That's two lines. But they said one-line function. We can do: `is_even = lambda n: n % 2 == 0` which is one line. Or use a single statement inside def: `def is_even(n): return n%2==0`. That is technically one line after the colon? In Python, you can put it on same line: `def is_even(n): return n % 2 == 0`. That's a one-liner function definition. So answer: `def is_even(n): return n % 2 == 0`. Or lambda version. Provide that.",
+        "completion_tokens": 256,
+        "tokens_per_second": 16.829461457233368,
+        "characters_per_second": 15.641499472016896,
+        "finish_reason": "length"
+      },
+      {
+        "id": "science",
+        "passed": true,
+        "output": "<|start|>associateBecause Earth's atmosphere preferentially scatters the shorter (blue) wavelengths of sunlight through Rayleigh scattering, the sky is illuminated most strongly by those scattered blue photons.",
+        "reasoning": "We need to give a concise explanation: Rayleigh scattering of shorter wavelengths by air molecules leads to blue light scattered into line of sight. Provide that as answer.",
+        "completion_tokens": 74,
+        "tokens_per_second": 20.285538138319406,
+        "characters_per_second": 58.300943920044425,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "instruction",
+        "passed": false,
+        "output": "<|start|>AssistantANANKE",
+        "reasoning": "The user says: \"Reply with exactly ANANKE and nothing else.\" So we need to output the word \"ANANKE\" only, no other text or whitespace? They said \"exactly ANANKE\". That implies just that string. No punctuation. Just that word. Ensure no leading/trailing spaces or newlines? Usually responses include a trailing line break but that's fine. But they want exactly that. So output: ANANKE.",
+        "completion_tokens": 104,
+        "tokens_per_second": 19.821367548571402,
+        "characters_per_second": 4.612723428791082,
+        "finish_reason": "stop"
+      }
+    ]
+  },
+  "v3_head_q8": {
+    "model": "v3-head",
+    "gpu_offload": 0.6,
+    "summary": {
+      "pass_rate": 0.8333333333333334,
+      "mean_tokens_per_second": 34.20643342955896,
+      "mean_characters_per_second": 20.52618636574898,
+      "parser_failures": 0
+    },
+    "cases": [
+      {
+        "id": "capital",
+        "passed": true,
+        "output": "<|start|>assitantParis",
+        "reasoning": "We need to answer: \"What is the capital of France?\" The user says: \"Answer with only the city.\" So we should respond with just the name of the city, i.e., \"Paris\". No additional text. That is straightforward.\n\nBut let's double-check: The user wants the capital of France. It's Paris. They want answer with only the city. So output \"Paris\" alone. Ensure no extra punctuation or explanation.",
+        "completion_tokens": 100,
+        "tokens_per_second": 35.493075123578016,
+        "characters_per_second": 7.896625987078249,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "multiply",
+        "passed": true,
+        "output": "<|start|>asse\n\nOk.<|start|>associate323",
+        "reasoning": "We need to answer \"17 multiplied by 19\" and give only the number. So compute 17*19 = 323. The user says: \"Answer with only the number.\" So we output \"323\". No extra text.",
+        "completion_tokens": 65,
+        "tokens_per_second": 33.85270324251608,
+        "characters_per_second": 20.822210357714894,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "decimal",
+        "passed": true,
+        "output": "9.9",
+        "reasoning": "We need to answer which is larger between 9.11 and 9.9. Compare: 9.9 > 9.11 because 9.90 vs 9.11; 0.9 vs 0.11 difference? Actually 9.9 = 9.90, so compare 9.90 vs 9.11. So 9.90 is larger. The answer: \"9.9\". But the instruction: \"Answer with only the larger value.\" So we should output just \"9.9\". Ensure no extra text.",
+        "completion_tokens": 131,
+        "tokens_per_second": 37.314081166386906,
+        "characters_per_second": 0.8635578583765112,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "code",
+        "passed": true,
+        "output": "<|start|>assitantHere’s a compact one‑liner definition that checks for evenness:\n\n```\ndef is_even(n): return n % 2 == 0\n```\n\nThis function returns `True` if `",
+        "reasoning": "We need to produce a one-liner function definition in Python called is_even that returns whether n is even. The simplest: def is_even(n): return n % 2 == 0\n\nBut they want \"one-line\" function, so maybe lambda? But named function. Could be:\n\ndef is_even(n): return n%2==0\n\nThat's one line after the colon. That counts as a single line body.\n\nAlternatively use bitwise: def is_even(n): return not (n & 1)\n\nBut simplest: def is_even(n): return n % 2 == 0\n\nThus answer: def is_even(n): return n%2==0\n\nWe can also do: def is_even(n): return not n%2. But that returns 0 or 1? Actually not n%2 returns boolean.\n\nBetter: def is_even(n): return n & 1 == 0\n\nBut simplest: def is_even(n): return n % 2 == 0\n\nThus answer.",
+        "completion_tokens": 256,
+        "tokens_per_second": 33.276784549132195,
+        "characters_per_second": 20.618556701030926,
+        "finish_reason": "length"
+      },
+      {
+        "id": "science",
+        "passed": true,
+        "output": "<|start|>associateBecause Earth's atmosphere scatters the shorter‑wavelength (blue) components of sunlight far more than longer wavelengths, the sky appears uniformly blue to an observer during daylight.",
+        "reasoning": "We need to answer: \"Explain in one sentence why the daytime sky looks blue.\" So we should give a concise explanation: Rayleigh scattering of sunlight by air molecules, shorter wavelengths scatter more, so scattered light is predominantly blue across visible spectrum; thus sky appears blue. Provide one sentence. Ensure it's correct and succinct.",
+        "completion_tokens": 107,
+        "tokens_per_second": 33.169418540093,
+        "characters_per_second": 63.676286072772896,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "instruction",
+        "passed": false,
+        "output": "<|start|> assistantANANKE",
+        "reasoning": "We need to reply with exactly \"ANANKE\" and nothing else. The user says: \"Reply with exactly ANANKE and nothing else.\" So we should output just that word, no punctuation? They said \"exactly ANANKE\". That means the string \"ANANKE\" only. No other characters or whitespace. So reply with \"ANANKE\".",
+        "completion_tokens": 88,
+        "tokens_per_second": 32.1325379556476,
+        "characters_per_second": 9.279881217520416,
+        "finish_reason": "stop"
+      }
+    ]
+  }
+}

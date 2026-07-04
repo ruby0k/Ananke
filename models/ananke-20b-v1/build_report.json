@@ -1,0 +1,8 @@
+{
+  "model": "ananke-20b-v1",
+  "base_model": "openai/gpt-oss-20b",
+  "change": "mainline control; native top-4 routing",
+  "active_experts": 4,
+  "tensors": 459,
+  "weight_bytes": 13761264768
+}

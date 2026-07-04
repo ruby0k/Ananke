@@ -1,0 +1,50 @@
+{
+  "model": "v7-hidden2560",
+  "smoke_pass_rate": 0.6666666666666666,
+  "mean_tokens_per_second": 37.6430059672823,
+  "cases": [
+    {
+      "id": "capital",
+      "passed": true,
+      "tokens_per_second": 39.41171447526586,
+      "output": "<|start|>answerParis"
+    },
+    {
+      "id": "multiply",
+      "passed": true,
+      "tokens_per_second": 38.79705422588831,
+      "output": "<|start|>assfinal<|message|>323"
+    },
+    {
+      "id": "decimal",
+      "passed": true,
+      "tokens_per_second": 38.67339215372121,
+      "output": "<|start|>assumed to be correct.<|start|>final<|message|>9.9"
+    },
+    {
+      "id": "code",
+      "passed": false,
+      "tokens_per_second": 36.72763934898459,
+      "output": ""
+    },
+    {
+      "id": "science",
+      "passed": true,
+      "tokens_per_second": 34.835708964992726,
+      "output": "<|start|>assThe daytime sky appears blue because of Rayleigh scattering—air‑molecule scattering preferentially scatters the shorter (blue) wavelengths of sunlight, making the sky look blue."
+    },
+    {
+      "id": "instruction",
+      "passed": false,
+      "tokens_per_second": 37.41252663484108,
+      "output": "<|start|>assymptionary<|message|>[No further analysis needed]<|start|>assumptionaryANANKE"
+    }
+  ],
+  "context": {
+    "passed": true,
+    "output": "ORCHID-7319",
+    "prompt_tokens": 3174,
+    "time_to_first_token": 2.994,
+    "tokens_per_second": 28.668227317835996
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "timestamp_utc": "2026-07-02T13:19:09.803349+00:00",
+  "backend": "transformers_direct_safetensors",
+  "model": "openai/gpt-oss-20b",
+  "load_seconds": 20.582696400000714,
+  "device_map": {
+    "model.embed_tokens": "0",
+    "model.layers.0": "0",
+    "model.layers.1": "0",
+    "model.layers.2": "0",
+    "model.layers.3": "0",
+    "model.layers.4": "0",
+    "model.layers.5": "0",
+    "model.layers.6": "0",
+    "model.layers.7": "0",
+    "model.layers.8": "0",
+    "model.layers.9": "cpu",
+    "model.layers.10": "cpu",
+    "model.layers.11": "cpu",
+    "model.layers.12": "cpu",
+    "model.layers.13": "cpu",
+    "model.layers.14": "cpu",
+    "model.layers.15": "cpu",
+    "model.layers.16": "cpu",
+    "model.layers.17": "cpu",
+    "model.layers.18": "cpu",
+    "model.layers.19": "cpu",
+    "model.layers.20": "cpu",
+    "model.layers.21": "cpu",
+    "model.layers.22": "cpu",
+    "model.layers.23": "cpu",
+    "model.norm": "cpu",
+    "model.rotary_emb": "cpu",
+    "lm_head": "cpu"
+  },
+  "results": [
+    {
+      "active_experts": 2,
+      "tokens": 8,
+      "seconds": 36.58909349999885,
+      "tokens_per_second": 0.21864438920850146,
+      "peak_vram_gb": 12.12066125869751,
+      "output": "<|channel|>analysis<|message|>Need to reply with numbers"
+    },
+    {
+      "active_experts": 4,
+      "tokens": 8,
+      "seconds": 25.263320199999725,
+      "tokens_per_second": 0.3166646322283516,
+      "peak_vram_gb": 12.120662212371826,
+      "output": "<|channel|>analysis<|message|>Need to reply with numbers"
+    }
+  ]
+}

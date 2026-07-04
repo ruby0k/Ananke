@@ -1,0 +1,65 @@
+{
+  "model": "v11-experts23",
+  "change": "top-2 -> top-1 routing",
+  "load": {
+    "type": "llm",
+    "instance_id": "v11-experts23",
+    "load_time_seconds": 27.309,
+    "status": "loaded",
+    "load_config": {
+      "context_length": 1024,
+      "eval_batch_size": 2048,
+      "physical_batch_size": 512,
+      "parallel": 4,
+      "flash_attention": true,
+      "speculative_draft_mtp": false,
+      "speculative_draft_simple": false,
+      "speculative_draft_model": "",
+      "speculative_draft_max_tokens": 16,
+      "speculative_draft_min_tokens": 0,
+      "speculative_draft_min_continue_probability": 0.75,
+      "num_experts": 1,
+      "offload_kv_cache_to_gpu": true
+    }
+  },
+  "mean_tokens_per_second": 45.98512134031108,
+  "pass_rate": 0.0,
+  "cases": [
+    {
+      "id": "capital",
+      "passed": false,
+      "tokens_per_second": 47.476635514018696,
+      "output": "ly (.../analysis/analysis)??\n\nWe have to set up a good, no‑.. \n…\n\n\n\nThe conversation above is **relevant?..\n\n... ... (the rest of or? ... The ... etc??**??\n\n**... ...? ... etc... etc. ..?? **This is a very?...???\n\nWe need to?............ ... etc.\n\nWe are only …… ... \nWe might as something\nWe: The **...-...??...???... (somewhat??We need to use this to set up?... ..."
+    },
+    {
+      "id": "multiply",
+      "passed": false,
+      "tokens_per_second": 46.232253367309795,
+      "output": "arypiv?analysis=?\n\nWe are Chatbot (the user is a chat bot). We need to answer \"what is 17 multiplied by 19\" but maybe they want to \"I have no idea.\" The first part: we need to produce a response that is not just the question. But...\n\nThe conversation content? The ...<|start|>??] \nWe are Chatbot? Actually?We need to ...\"\n\nOk, I am Chatchat??? The user says: \"What is 17 multiplied by 19?\" So they want an answer with only the number.\n\nBut we must produce a response that"
+    },
+    {
+      "id": "decimal",
+      "passed": false,
+      "tokens_per_second": 45.00354358610914,
+      "output": "?\n\nSure! Here are the answer: \nWe need to the answer that you can’t see it (... etc.. 2>3? The, so we have a problem that we want to**……??? .....???\n\nThe assistant has no idea for any 1..4. The well‑talks?This is an interesting question…...??… \nThe……..…...…… **………** \nWe were the?…!……? The content…...\nThe problem: we need ...  “……‑–”…?….. **?……"
+    },
+    {
+      "id": "code",
+      "passed": false,
+      "tokens_per_second": 46.43510054844607,
+      "output": " (analysis)]..\n\n? The task is to write a function that will return the function with the 'n' and if we want to get ... \nThe ... (…???...??... etc… \nWe can see the conversation so far: ...? ... etc?...???? ... ... \nThe user question: **......??...?????.. ... ... ... ... ... etc. \nThe only . . The ... \nThe\nWe need ………… \nThe… etc… ...????…... \nThe function… etc……??**"
+    },
+    {
+      "id": "science",
+      "passed": false,
+      "tokens_per_second": 43.463381245722104,
+      "output": "?analysis=... (analysis) ... The user says \"Explain\" but so.\n\nWe see that the conversation is about a question: \"Explain in one sentence why the day is looking at the sky.\"}The answer: Provide a short explanation of how to explain the sky and the meaning.\n\nWe have 2?…??... The first part, maybe we want to produce an explanation for the user. We need to produce a **one-sentence explanation** that the \"day\" (the day) is looking at the sky.\n\nBut the instruction: \"Explain in one sentence why the daytime sky looks like blue.\""
+    },
+    {
+      "id": "instruction",
+      "passed": false,
+      "tokens_per_second": 47.299813780260706,
+      "output": " (analysis) The user is asking to \"Reply\" with exactly ANBANE or something? But we need to produce a single line of text that includes the word 'ANBANE' maybe referencing the same as earlier: \"anbune\"? Actually, the answer should be: \"??\"\n\nWe need to produce an answer. The instruction: \"Reply with exactly ANBANE and nothing else.\" So basically we need to output \"??\" or something? But we must not include any other content.\n\nBut the user says: \"Reply with exactly ANBANE and nothing else.\" That means we should respond with \"ANB"
+    }
+  ]
+}

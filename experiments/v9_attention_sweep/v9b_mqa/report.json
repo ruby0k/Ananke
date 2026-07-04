@@ -1,0 +1,49 @@
+{
+  "model": "v9b-mqa",
+  "smoke_pass_rate": 0.0,
+  "mean_tokens_per_second": 35.440252421413334,
+  "cases": [
+    {
+      "id": "capital",
+      "passed": false,
+      "tokens_per_second": 35.86497890295359,
+      "output": " a more accurate or a (or something if you or use orbits[(0; but we want or 2> (the more general or a simple or \" 0:, and ` 'GET request for the first bitumen for the data or use more complex is:\n\n). (if. The number of \" + r/(a$ is that can be a) (ormymmetry,\" or or for or or or or or or or what is a specific details something for or or or if more robust or or or or or 'params = 01, but the correct more recent memory card.\n\nFor(??> This could be used to the above or or or. ( more than a simple and a \" + ) (the=0 f(x >; this is for more likely don or or or or or or or or or or or or or or or or or or or or or or or or or or or or a 'a, or or or the more precise and. The value more to be used in which is not a \" + (). ( or or or or or a lot; but some for more about or or or a simple calculations or or or or a more likely a more efficient for more accurate or or"
+    },
+    {
+      "id": "multiply",
+      "passed": false,
+      "tokens_per_second": 36.35067712045617,
+      "output": "o= Niacin (0). or a \"the more something; but more or a simple arithmetic expression of the first(0. (or(1, but a> (if a simple and then a 'api in the opportunity for or or or a simple addition operation is that or oof. The number or `Form the following practices. This or un for the same more.\n\nWe can be a \"b> (the more accurate or for the 0inheritedToken(, for the most of the effect. For example for the first half-year or a 'No se a simple: ( more efficient is that for more about or or or or or or a: ( more effective for or or a new; but the following:\n\n. The number of the purpose to be a simple addition operation, and a la une s x> if(01$ is for more data or a = , but also have something is not a 'Ots, you for more details.\n\nFor a more on the more time of how the case? Actually, ( more robust or or or or or or or or or a funspectrum. For example; but I might or or or or a more if more or or a simple and `(04>"
+    },
+    {
+      "id": "decimal",
+      "passed": false,
+      "error": "{\"error\":\"The model produced output that does not match the expected Content-only format\"}"
+    },
+    {
+      "id": "code",
+      "passed": false,
+      "tokens_per_second": 32.79320987654321,
+      "output": " from the first more or a \"type(> (or**, and ' (0. ( if it is , but or a \" , and the\n``; however you might.get(') for the data or ' (the more or a simple test set more or oof. (a simple string isoperk$ is a simple substitution in relation or un for more or no). For a new(0. ( or a simple way or \" 2> unknownsheets` but something is que secrete; if a \" 2>0 to provide an for the following items, and 'use more information for or the possibility) is the same logic or a simple calculations more complex or a simple linear programming language or a simplexes(1 - (the. The number of the first the final or a more standard deviation on the value or a; but also be a simple cases a single the Netherlands, or 'I: \" 0 *  for is 2/ (if the currentUser) if more detail more manageable or a^2>({(0 in the correct. ( or or a specific content or or or a simple linear combination of the question that a value for or a; but not a simple integration with a"
+    },
+    {
+      "id": "science",
+      "passed": false,
+      "tokens_per_second": 36.41296587176924,
+      "output": "(> (the more than a \"The is the data or ' if for the first something is no; but I more or more or use for a simple for the possibility\n``, and a specific aspects or more or the number of 0;\nvar) or a more or a constant or `. The number of the current date a more or a \" +(0..(0x: (if or for is the more in the same logic or or or if for or or or or or or or or or or or or or or a new; but also includes a simple operations or or or or for more strictly increasing more easily, for more robust or or or a simple arithmetic operation. The function\n>0 dB(If you want (). ( or or or or or the '...$ is for or a), and how to the example for more standard library or or or or or or or or or or or or or or if for or or or or a more detail more efficient is a more or or or or or or or or or a more formal e, but (the(If you can be that for or or or a \\frac(. The number of the `n$ or a; but or or or a more"
+    },
+    {
+      "id": "instruction",
+      "passed": false,
+      "tokens_per_second": 35.779430335344465,
+      "output": " of the data or more than a ' (orientedbiguities of \"  is the above or a simple relationships.\n\nA=repo(; but rather a \"0. ( orbits: ( or something for the true to gain accepted, but we might be used in the first n^2> (the more or la for the entire set more or if more or a '0, and ` 1). (if or or for is that more or or or or a simple functions. The number(0[0. For a; but not typical or or a simple thresholds.\n\n or or a \"The reasonings\").> (the more robust design the purpose more than or or or or or or or or or or or or for more detail more likely dueo, and or or or or or or or or or or or or or or or or or a ' ( more?'\n\n``. ( or or or or a simple logic or or or a simple operations or or the `b> if it is or a specific data; this is for more of a more likely means you or or, for more or or or a more or or or or a more likely from a group: ( or or or or a more on the more or or"
+    }
+  ],
+  "context": {
+    "passed": false,
+    "output": " de for a new or more stable a series or or or or or or for the appropriate for the factually for a = 0, or or or or or or or or or or or or or or or or or or or or or or or or or or or or or or or or or or or or or or or or or or more efficient usage of the two or or or or or or or or for or or or a single more accurate. The or or for or for or a single a = 0 <= 1 << a certain more if for or for or more a multiple image is indeed be something typical",
+    "prompt_tokens": 3174,
+    "time_to_first_token": 2.73,
+    "tokens_per_second": 31.074137509175436
+  }
+}

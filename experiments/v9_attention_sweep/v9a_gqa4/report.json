@@ -1,0 +1,50 @@
+{
+  "model": "v9a-gqa4",
+  "smoke_pass_rate": 0.0,
+  "mean_tokens_per_second": 36.24972555783066,
+  "cases": [
+    {
+      "id": "capital",
+      "passed": false,
+      "tokens_per_second": 40.38644282546721,
+      "output": " \nSo, a file to 1. The second.\n\nThe text is out of ...? \nWe need to avoid being...?\n\nBut we can find the code ...\n```\n```\n\nWait: \"key' (the=0\"\nfor which is '3? No. \nNow that the ...? \n```\n\nIt says an @\nBanc://**\n\nSo what? But the answer is a '.\n\nThe second.\nWe have to find a : 01\n\nThe code?\n```\n``\nThis is a new file of \n2. The question=0 = 'x'': $i\n```\n- we can be ...? \nBut how? \nThis is a new ...\n... etc. \nSo the user should be from the same: `.\n\nIt means that is itself // I found, and a program.\nWe have to the data in the key for the page. So we are 0. The question is used to a ... \n`` on the rest of your has been at? \nend the code=webpage=+1/2-.. etc.\n\nThe answer: '2024'2023'.\n$ means that ?.\nWe can be - the rest of the ...\n```\n\nThis could have been, we"
+    },
+    {
+      "id": "multiply",
+      "passed": false,
+      "tokens_per_second": 35.96107742208433,
+      "output": "=2.\n\nBut the answer from a single line of the question and the code? \n```\n``- The question: I have to answered by the first name on the \n- \n```\n\nThis is a: The user’s domain.\nThe code is used in a: \"N-PRO: The `line 1: \n\n** de 's: 4, a: 02? \n    varructa=0.00\n    and\n\nIt would be part of the question.\n\nSo we want to make them from a list of one of ... is on line?\n\nBut the code? Actually there’s \n```\n-1: 1 for all lines of the line. \n\nThe answer in the first.\n\nThis is a that, it will fail to do? Not sure? The\n\nIt seems like a local level=02\n    - \"on' with a: 'n\"\n      2 ... I think from? \n```\n\nSo basically means to be used for the same line?\n\nI should = false? Actually the question...?\n\nIt is a n-1: [^2, and in front end of key.\n\nThe code? Maybe we can say something about this? The answer or not me? \n\n**"
+    },
+    {
+      "id": "decimal",
+      "passed": false,
+      "tokens_per_second": 33.79721669980119,
+      "output": " of the code in which means we have a list of 2. So answer to use? The answer: \".\n\nSo the first name has been\nthe next to the same ... etc? \n- The question is a can be 3. \nThe answer for the \n    and then you want to use the user, it. \nOk\nThis is ok= the right of the final result in the\nWe have an email address. The code \nWe has been... (the) \n`` to come up = 'O' \n```\n\nSo we= 0x> 1. So answer: \" ' => you? The answer to get ...? \nThe first line, which one for a \n- I was originally on the question from event of the \nOk.\n\nBut the place? \nthe method\". That is an: \nWe have a = \nThis is to the next= out of the same? \nIt means we should be -2. The answer. It was ... . net... 'no 0. The code for which is \" ok ' or ) ?\n\nOk\" is it on the \nThe text, line in the key, and that the other side: you want to read.\n\nBut I= 1)"
+    },
+    {
+      "id": "code",
+      "passed": false,
+      "tokens_per_second": 34.94107974787613,
+      "output": "? The text of the: ... '.\n\nThe answer: \"the 1. The question will be 0. The user can you from the original data and then 3\n 03: 0 or .\"\n\nThis is a list of the other ways to make sense for the \nThe more .... with a that the same. \nthere are there is is a ...? Actually, the machine.\n\nSo we have a large number of the same code is ... The answer: \"I was is ... I will be 1... etc. So the same ...? But the 'the first to the string of the data from \nThe question: \"The question is not being is it from the \n-? Actually they are some way to the other ... . \nThis is the same as the best ... The code, or the same time?\n\nBut a large that the is ... is on the 0 and 0. So the same ... The 's  << answer for the question is: \"I will be 3 : 4. That means to the \n-? The is a . so on a is \n    1. 0 is from 0.0. \n    return the data of the was 0\n\nOk. \n"
+    },
+    {
+      "id": "science",
+      "passed": false,
+      "tokens_per_second": 35.67431449356464,
+      "output": ".\n\nWe have to answer? The question. \nThe user is a shortness. So we are all of 00. That means that they want to: \"analysis: \"is\" from: \nSo the ' + the first: 2023 and: \" : 0, the first name: . The rest of: there was 1.\n\nBut: 00) is a user with a '\n\nIt' for: 4. So we need to be that ...\"\n\nThis seems like this: \"new: \n- \" . \n    , ...\"\n\nIn the text.\n\nSo answer: \n        . \n\nWe have: 'per: '.\n\nThe question says: \"OCTOP: The: \"the\" = 0+1=, and a programmatic? Or? \n- `p: 00\n    4\n\nIt: 0: ... etc. So the answer to the all that is? \n- **** = 0.\n\nSo we are: \nWe have to the 'the: \" . . 0 - 1=0, so it was a = 0-... (the code) ... etc.\n\nThis is a more than ... this\n\nIt means an `user with two."
+    },
+    {
+      "id": "instruction",
+      "passed": false,
+      "tokens_per_second": 36.73822215819046,
+      "output": " of the code: \"a 'b.\n\nThe second half. \nWe want to the other side? The first part is a...?\n\nBut the 0-??\n\nSo, we see if you from a user? I thinks: 0-10\n\" as the rest for me? Not sure what? Let's write about how to be ... \" \n\nThe question: \"3. The code is a: \" + 1 6: 0x. The first time and the same, etc.\n\n```\nSo we can we have a new class= 'user) where the user should be a ... ?\n\nBut the code? \nWe are 05\n```\n\n** to test? Let's try to find...; we do?\n\nThe question is a: \" .getUser() - 4: 3: 1, etc. So answer is a. The rest of the same for a user is not an application from 'user' ?\n\nBut I gave]\".is a user with id=__x? \n```\n   * 6) {\n    // This is a file is? Let's read: 0 to the first part? \nThis is a new class. So, all 4 \nSo we want to be"
+    }
+  ],
+  "context": {
+    "passed": false,
+    "output": ", etc. So that slow and so on top. That means that was not being recorded. 'The question \nWe should be in the three shorts]\"\n\nSo, we will be? The ordinary observations are all other. The practice of the record.\n\nOk?\n\n```\nSo the 100% and a certain aspects of the official,\n\nthe which is an organization. The answer. The question from the two world records. So the following ordinary ordinary weather conditions and the question and a normal routine. That is to be the original data that the ordinary world and the overall structure. \nWe have the record.\n\nThe title\n\nIt",
+    "prompt_tokens": 3174,
+    "time_to_first_token": 2.758,
+    "tokens_per_second": 30.8852140077821
+  }
+}

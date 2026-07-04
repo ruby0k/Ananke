@@ -1,0 +1,218 @@
+{
+  "control": {
+    "model": "ananke-gpt-oss-20b-top2",
+    "gpu_offload": 0.6,
+    "summary": {
+      "pass_rate": 0.8333333333333334,
+      "mean_tokens_per_second": 11.53942421607693,
+      "mean_characters_per_second": 4.793820283798287,
+      "parser_failures": 0
+    },
+    "cases": [
+      {
+        "id": "capital",
+        "passed": true,
+        "output": "Paris",
+        "reasoning": "We need to answer: \"What is the capital of France?\" The user says: \"Answer with only the city.\" So we should respond with just \"Paris\". No extra text. That is straightforward.\n\nBut let's double-check: They want the capital of France, and they say \"Answer with only the city.\" So presumably the answer is \"Paris\". There's no trick. Just output \"Paris\".\n\nWe must ensure not to add any other words or punctuation beyond that. The instruction says \"Answer with only the city.\" That means we should just write \"Paris\" as the entire response.\n\nThus final answer: \"Paris\".",
+        "completion_tokens": 136,
+        "tokens_per_second": 11.155923471349332,
+        "characters_per_second": 0.4140786749482402,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "multiply",
+        "passed": true,
+        "output": "323",
+        "reasoning": "The user asks: \"What is 17 multiplied by 19? Answer with the number.\" So compute 17 * 19 = 323. Wait, 17*20=340 minus 17=323. Yes. Provide only the number. So answer: 323.",
+        "completion_tokens": 68,
+        "tokens_per_second": 11.903542791923446,
+        "characters_per_second": 0.5334281650071124,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "decimal",
+        "passed": true,
+        "output": "9.9",
+        "reasoning": "We need to answer which is larger between 9.11 and 9.9. Compare: 9.9 > 9.11 because 0.9 vs 0.11 after decimal? Actually 9.9 = 9.90, so compare 9.90 vs 9.11; obviously 9.90 is larger. So answer: 9.9.",
+        "completion_tokens": 94,
+        "tokens_per_second": 11.672407670013584,
+        "characters_per_second": 0.3768844221105528,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "code",
+        "passed": false,
+        "output": "```python\ndef is_even(n): return n",
+        "reasoning": "We need to write a one-line Python function named is_even that returns whether n is even. The function signature likely: def is_even(n): return ... But they want one line inside the function? They say \"Write a one-line Python function named is_even that returns whether n is even.\" So we can do:\n\ndef is_even(n):\n    return n % 2 == 0\n\nBut that's two lines. We need a single line of code for the entire function definition, including def and return. In Python you can write it as: def is_even(n): return n % 2 == 0\n\nThat's one line. So answer: `def is_even(n): return n % 2 == 0`. That returns True or False.\n\nAlternatively, using bitwise & operator: n & 1 == 0. But modulo works fine.\n\nThus the answer: def is_even(n): return n % 2 == 0\n\nWe can also write as lambda: is_even = lambda n: n % 2 == 0 but they want named function. So final answer: `def is_even(n): return n % 2 == 0`.",
+        "completion_tokens": 256,
+        "tokens_per_second": 11.109658868121814,
+        "characters_per_second": 1.4812878490829087,
+        "finish_reason": "length"
+      },
+      {
+        "id": "science",
+        "passed": true,
+        "output": "Because Earth’s atmosphere preferentially scatters the shorter‑wave blue light from the Sun through Rayleigh scattering, the scattered blue photons are seen in all directions of the sky while the longer‑wave redder light passes mostly unimpeded.",
+        "reasoning": "We need to answer: \"Explain in one sentence why the daytime sky looks blue.\" So we should give a concise explanation: Rayleigh scattering of sunlight by atmospheric molecules scatters shorter wavelengths (blue) more, making sky blue. Provide one sentence. Ensure it's correct and succinct. Let's produce.",
+        "completion_tokens": 117,
+        "tokens_per_second": 11.800598925782403,
+        "characters_per_second": 24.900904563471897,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "instruction",
+        "passed": true,
+        "output": "ANANKE",
+        "reasoning": "The user says: \"Reply with exactly ANANKE and nothing else.\" So we need to reply with the word \"ANANKE\" only, no other text. The instruction is to reply with exactly that string. There's no trick; just output ANANKE.",
+        "completion_tokens": 67,
+        "tokens_per_second": 11.594413569270996,
+        "characters_per_second": 1.0563380281690142,
+        "finish_reason": "stop"
+      }
+    ]
+  },
+  "v1_vocab64k": {
+    "model": "ananke-v1-vocab64k",
+    "gpu_offload": 0.6,
+    "summary": {
+      "pass_rate": 0.8333333333333334,
+      "mean_tokens_per_second": 29.39628711011349,
+      "mean_characters_per_second": 23.17664548444597,
+      "parser_failures": 0
+    },
+    "cases": [
+      {
+        "id": "capital",
+        "passed": true,
+        "output": "<|start|>associateParis",
+        "reasoning": "We need to answer: \"What is the capital of France?\" The user says: \"Answer with only the city.\" So we should respond with just \"Paris\". No other text. That is straightforward.\n\nBut let's double-check: They want the capital of France, which is Paris. Provide only the city name. So output: \"Paris\".",
+        "completion_tokens": 80,
+        "tokens_per_second": 30.36779191988977,
+        "characters_per_second": 8.870034708831469,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "multiply",
+        "passed": true,
+        "output": "<|start|>associate323",
+        "reasoning": "We need to answer: \"What is 17 multiplied by 19?\" The user says: \"Answer with only the number.\" So we should compute 17 * 19 = 323. Provide only that number, no explanation. Let's do it.",
+        "completion_tokens": 62,
+        "tokens_per_second": 29.522375579852792,
+        "characters_per_second": 10.194174757281553,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "decimal",
+        "passed": true,
+        "output": "9.9",
+        "reasoning": "We need to answer which is larger between 9.11 and 9.9. Compare: 9.9 > 9.11 because 9.9 = 9.90. So 9.90 > 9.11. The question: \"Answer with only the larger value.\" So we should output just \"9.9\".",
+        "completion_tokens": 86,
+        "tokens_per_second": 29.779888533184668,
+        "characters_per_second": 1.0500525026251313,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "code",
+        "passed": true,
+        "output": "<|start|>Here’s a compact, single‑line implementation:\n\n**Using a regular function definition**\n\n> `def is_even(n): return n % 2 == 0`\n\n**Or, equivalently, using a lambda**\n\n> `is_even = lambda n: n % 2 == 0`\n\nBoth versions give you an `",
+        "reasoning": "The user asks: \"Write a one-line Python function named is_even that returns whether n is even.\" They want a single line function definition, presumably using lambda or def with expression? The simplest: `def is_even(n): return n % 2 == 0`. That's two lines. But they said one-line function. We can do: `is_even = lambda n: n % 2 == 0` which is one line. Or use a single statement inside def: `def is_even(n): return n%2==0`. That is technically one line after the colon? In Python, you can put it on same line: `def is_even(n): return n % 2 == 0`. That's a one-liner function definition. So answer: `def is_even(n): return n % 2 == 0`. Or lambda version. Provide that.",
+        "completion_tokens": 256,
+        "tokens_per_second": 29.44912807483543,
+        "characters_per_second": 27.37036609308234,
+        "finish_reason": "length"
+      },
+      {
+        "id": "science",
+        "passed": true,
+        "output": "<|start|>associateBecause Earth's atmosphere preferentially scatters the shorter (blue) wavelengths of sunlight through Rayleigh scattering, the sky is illuminated most strongly by those scattered blue photons.",
+        "reasoning": "We need to give a concise explanation: Rayleigh scattering of shorter wavelengths by air molecules leads to blue light scattered into line of sight. Provide that as answer.",
+        "completion_tokens": 74,
+        "tokens_per_second": 29.568468185526953,
+        "characters_per_second": 85.12363194162951,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "instruction",
+        "passed": false,
+        "output": "<|start|>AssistantANANKE",
+        "reasoning": "The user says: \"Reply with exactly ANANKE and nothing else.\" So we need to output the word \"ANANKE\" only, no other text or whitespace? They said \"exactly ANANKE\". That implies just that string. No punctuation. Just that word. Ensure no leading/trailing spaces or newlines? Usually responses include a trailing line break but that's fine. But they want exactly that. So output: ANANKE.",
+        "completion_tokens": 104,
+        "tokens_per_second": 27.69007036739132,
+        "characters_per_second": 6.451612903225806,
+        "finish_reason": "stop"
+      }
+    ]
+  },
+  "v2_vocab16k": {
+    "model": "v2-vocab16k",
+    "gpu_offload": 0.6,
+    "summary": {
+      "pass_rate": 0.16666666666666666,
+      "mean_tokens_per_second": 34.033448650023985,
+      "mean_characters_per_second": 137.34627338228302,
+      "parser_failures": 0
+    },
+    "cases": [
+      {
+        "id": "capital",
+        "passed": false,
+        "output": "<|channel|>channe...",
+        "reasoning": "",
+        "completion_tokens": 5,
+        "tokens_per_second": 37.971415118698644,
+        "characters_per_second": 217.3913043478261,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "multiply",
+        "passed": false,
+        "output": "<|channel|> analysis<|message|>We need to answer: \"What is 17 times 19?\" The user says: \"What is 17 multiplied by 19? Ans[wer] with only the number.\" So we should give the product: 17 * 19 = 17*20 - 17 = 34-17=33? Let's compute: 17*10=170, times 2 = 34, so 170+34=204. Or 17*19 = 17*20 - 17 = 34 - 17? No that's wrong because 17*20 = 34? That would be 17*20 = 34? But 17*10 = 170, times 2 is 34? Let's do carefully: 17 * 19. 17 * 20 = 34 (but that seems off by factor of 10). Let's compute properly: 17 * 19 = 17 * (20 - 1) = 17*20 - 17 = 34 - 17? But 17*20 is 17 times 20, which is 17*2*10 = 34*10 = 170. So 170 - 17 = 153",
+        "reasoning": "",
+        "completion_tokens": 256,
+        "tokens_per_second": 35.26970954356846,
+        "characters_per_second": 86.16874135546334,
+        "finish_reason": "length"
+      },
+      {
+        "id": "decimal",
+        "passed": true,
+        "output": "<|channel|>valuemath/?…...…..…?*…………………………?………...………\n\nWe need to answer which is larger: 9.11 or 9.9, and give only the larger value.\n\nThe first step: 9.10……………………………………………………………………………………………………………………………………………...\nWe need to output only the larger value, 9.7?... The user asks: \"Which is larger, 9.11 or 9? ...\"\n\nThe assistant says: We need.. ... etc.\n\nWe must… ………………………………………………...\nThe content………………………………...\nWe should…………………………………………………………\"\n\nThe user says: ... (the question). The user wants only the comparison result. We need.......……………………",
+        "reasoning": "",
+        "completion_tokens": 256,
+        "tokens_per_second": 31.29986498097459,
+        "characters_per_second": 66.65030072419296,
+        "finish_reason": "length"
+      },
+      {
+        "id": "code",
+        "passed": false,
+        "output": "<|channel|>channe...",
+        "reasoning": "",
+        "completion_tokens": 5,
+        "tokens_per_second": 38.24355022525451,
+        "characters_per_second": 206.18556701030928,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "science",
+        "passed": false,
+        "output": "<|channel|>channe...<|start|> assistant<|channel|>ca...",
+        "reasoning": "",
+        "completion_tokens": 11,
+        "tokens_per_second": 30.73157921204231,
+        "characters_per_second": 167.17325227963525,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "instruction",
+        "passed": false,
+        "output": "<|channel|>mistruths/logic?=reality-1}",
+        "reasoning": "",
+        "completion_tokens": 15,
+        "tokens_per_second": 30.684572819605393,
+        "characters_per_second": 80.5084745762712,
+        "finish_reason": "stop"
+      }
+    ]
+  }
+}

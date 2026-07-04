@@ -1,0 +1,146 @@
+{
+  "v7_hidden2560": {
+    "model": "v7-hidden2560",
+    "gpu_offload": 0.6,
+    "summary": {
+      "pass_rate": 0.6666666666666666,
+      "mean_tokens_per_second": 34.17230177490552,
+      "mean_characters_per_second": 16.94892432108618,
+      "parser_failures": 0
+    },
+    "cases": [
+      {
+        "id": "capital",
+        "passed": true,
+        "output": "<|start|>answerParis",
+        "reasoning": "We need to answer: \"What is the capital of France?\" The answer should be only the city. So we just give \"Paris\". But maybe they want the name of the city only, no extra text.\n\nThus final answer: Paris.",
+        "completion_tokens": 60,
+        "tokens_per_second": 30.03345727140034,
+        "characters_per_second": 10.240655401945725,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "multiply",
+        "passed": true,
+        "output": "<|start|>assfinal<|message|>323",
+        "reasoning": "We need to answer the product of 17 and 19. That's 323. So output \"323\". Ensure no extra text. Just number.\n\nBut we must consider that the user says: \"Answer with only the number.\" So just \"323\". No other text. So final answer: 323.",
+        "completion_tokens": 72,
+        "tokens_per_second": 35.217261153600084,
+        "characters_per_second": 15.392254220456804,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "decimal",
+        "passed": true,
+        "output": "<|start|>assumed to be correct.<|start|>final<|message|>9.9",
+        "reasoning": "We need to answer which of two numbers is larger: 9.11 vs 9.9. The larger is 9.9. So we just output 9.9.\n\nBut we must respond with only the larger value, so \"9.9\". Ensure no extra text. Just that number.\n\nThus final answer: 9.9.",
+        "completion_tokens": 91,
+        "tokens_per_second": 33.40196029130914,
+        "characters_per_second": 21.843761569788967,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "code",
+        "passed": false,
+        "output": "",
+        "reasoning": "We need to write a one-line Python function named is_even that returns whether n is even.\n\nSo we need to produce code: def is_even(n): return n % 2 == 0\n\nBut they want a one-liner function, so maybe lambda? But the requirement: \"Write a one-line Python function named is_even that returns whether n is even.\" So we can write:\n\ndef is_even(n):\n    return n % 2 == 0\n\nAlternatively, as a lambda: is_even = lambda n: n % 2 == 0\n\nBut they want a function named is_even. The simplest code: def is_even(n): return n % 2 == 0\n\nWe can also use the one-liner: is_even = lambda n: n % 2 == 0\n\nBut that would be a variable, not a function.\n\nBetter to write:\n\ndef is_even(n):\n    return n % 2 == 0\n\nThat's a single line. Or we could do: is_even = lambda n: n % 2 == 0\n\nBut the question says \"one-line Python function named is_even\". So we can define as:\n\nis_even = lambda n: n % 2 == 0\n\nThis",
+        "completion_tokens": 256,
+        "tokens_per_second": 35.323452001662275,
+        "characters_per_second": 0.0,
+        "finish_reason": "length"
+      },
+      {
+        "id": "science",
+        "passed": true,
+        "output": "<|start|>assThe daytime sky appears blue because of Rayleigh scattering—air‑molecule scattering preferentially scatters the shorter (blue) wavelengths of sunlight, making the sky look blue.",
+        "reasoning": "We need to explain why the daytime sky looks blue. The answer should be a single sentence. We can mention Rayleigh scattering and the fact that shorter wavelengths scatter more, leading to blue.\n\nWe must produce a single sentence explanation: \"The daytime sky appears blue because of Rayleigh scattering by atmospheric molecules, which preferentially scatters sunlight's blue light.\"\n\nBut we need to explain in one sentence why the daytime sky looks blue. So we can say: \"The daytime sky is blue due to Rayleigh scattering of sunlight by air molecules, which scatter shorter wavelengths (blue) more strongly.\" That is a single sentence.\n\nWe should keep it short and clear. The answer must be concise but correct.\n\nLet's produce: \"Because the Earth's atmosphere scatters sunlight, with shorter blue wavelengths being scattered more intensely by atmospheric molecules, making the sky appear blue during daytime.\"\n\nYes that is one sentence. Let's do that.",
+        "completion_tokens": 227,
+        "tokens_per_second": 36.31866347318419,
+        "characters_per_second": 30.337078651685392,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "instruction",
+        "passed": false,
+        "output": "<|start|>assymptionary<|message|>[No further analysis needed]<|start|>assumptionaryANANKE",
+        "reasoning": "We need to produce a reply that is exactly \"ANANKE\" and nothing else. So we just output the word ANANKE.\n\nBut we have to consider: The instruction says \"Reply with exactly ANANKE and nothing else.\" That means we should output only the string \"ANANKE\". No other characters, no quotes? Probably just the word.\n\nThus answer: ANANKE\n\nWe need to ensure it's exactly that. So final answer is:\n\nANANKE\n\nYes.",
+        "completion_tokens": 130,
+        "tokens_per_second": 34.739016458277106,
+        "characters_per_second": 23.879796082640194,
+        "finish_reason": "stop"
+      }
+    ]
+  },
+  "v8_ffn2560": {
+    "model": "v8-ffn2560",
+    "gpu_offload": 0.6,
+    "summary": {
+      "pass_rate": 0.5,
+      "mean_tokens_per_second": 37.61129754203686,
+      "mean_characters_per_second": 15.4130127932614,
+      "parser_failures": 0
+    },
+    "cases": [
+      {
+        "id": "capital",
+        "passed": true,
+        "output": "<|start|>assentParis",
+        "reasoning": "We need to answer: \"The capital of France\" is Paris. So we just output \"Paris\". The user says: \"Answer with only the city.\" So we should provide \"Paris\". Let's do that.\n\nBut maybe they want a short answer: \"Paris\". So final answer: \"Paris\".",
+        "completion_tokens": 73,
+        "tokens_per_second": 39.16985659539899,
+        "characters_per_second": 11.05583195135434,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "multiply",
+        "passed": false,
+        "output": "<|start|>ass287",
+        "reasoning": "We need to answer: \"What is 17 multiplied by 19?\" The answer should be just the number.\n\nSo 17 * 19 = 287.\n\nThus answer: 287.",
+        "completion_tokens": 50,
+        "tokens_per_second": 39.57499620080036,
+        "characters_per_second": 12.14574898785425,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "decimal",
+        "passed": true,
+        "output": "<|start|>ass9.9\n\nWe are the bigger number, so 9.9.",
+        "reasoning": "We need to answer which is larger: 9.11 vs 9.9. The larger value is 9.9 because 9.9 > 9.11? Actually 9.9 is greater than 9.11. So answer \"9.9\". Let's do that.",
+        "completion_tokens": 87,
+        "tokens_per_second": 33.97127748012778,
+        "characters_per_second": 19.638648860958366,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "code",
+        "passed": false,
+        "output": "",
+        "reasoning": "We need to write a one-line Python function named `is_even` that returns whether n is even.\n\nThe user says: \"Write a one-line Python function named is_even that returns whether n is even.\"\n\nSo we need to produce code for a function that takes an integer n and returns True if it's even. The function should be defined as a single line, presumably with the `def` keyword and maybe a lambda or something.\n\nWe can write:\n\n```\ndef is_even(n): return n % 2 == 0\n```\n\nBut we need to ensure it's one line. So we can do: `def is_even(n): return n%2==0`.\n\nAlternatively, we could use a lambda function: `is_even = lambda n: n%2==0`. But the user says \"one-line Python function named is_even\". That might be a function definition.\n\nWe need to write code that defines a function. The function should take an integer and return True if it's even.\n\nSo we can do:\n\n``python\ndef is_even(n): return n % 2 == 0\n```\n\nBut the user says \"one-line Python function named is_even\". So we might just define it as a lambda: `is = lambda",
+        "completion_tokens": 256,
+        "tokens_per_second": 38.33433553818401,
+        "characters_per_second": 0.0,
+        "finish_reason": "length"
+      },
+      {
+        "id": "science",
+        "passed": true,
+        "output": "<|start|>userThe daytime sky appears blue because the sun’s light is scattered by the Earth's atmosphere, causing a blue hue due to the scattering of photons by air molecules.",
+        "reasoning": "We need to explain why the daytime sky looks blue. The question is \"Explain in one sentence why the daytime sky looks blue.\" So we need a single sentence that explains the reason.\n\nThe explanation: The sun's light travels through Earth's atmosphere, scattering due to Rayleigh scattering causing blue color.\n\nSo we can say: \"Because of Rayleigh scattering, sunlight from the Sun appears blue as it is scattered by molecules in the atmosphere.\"\n\nWe might mention the scattering of sunlight by atmospheric molecules. So one sentence: \"The daytime sky looks blue because the sun's light is scattered by the Earth's atmosphere, causing a blue hue due to the scattering of photons by air molecules.\" Or something like that.\n\nBut we need to produce an answer with the explanation in one sentence.\n\nWe can say: \"Because of Rayleigh scattering, sunlight from the Sun is scattered by atmospheric molecules, resulting in a blue color.\"\n\nOk. Let's produce the final answer.",
+        "completion_tokens": 229,
+        "tokens_per_second": 37.44530777590242,
+        "characters_per_second": 28.79236590983876,
+        "finish_reason": "stop"
+      },
+      {
+        "id": "instruction",
+        "passed": false,
+        "output": "<|start|>assufinal<|message|>ANANKE\n\nBut maybe they want to see if we can respond with exactly \"ANANKE\" and nothing else. So we just output \"AN",
+        "reasoning": "We need to produce a reply that is \"exactly ANANKE\" (maybe the word \"ANANKE\")? The user says: \"Reply with exactly ANANKE and nothing else.\" So we must output \"ANANKE\". That is presumably the answer.\n\nBut maybe they want us to respond with \"ANANKE\" only. So just output \"ANANKE\". Let's do that.\n\nWe need to produce \"ANANKE\" as the entire content. The user says: \"Reply with exactly ANANKE and nothing else.\" So we should output \"AN\", \"A\", \"N\", \"K\", \"E\"? Actually, maybe they want us to output \"ANANKE\". So we just output that.\n\nThus final answer: \"ANANKE\"\n\nBut the instruction says \"Reply with exactly ANANKE and nothing else.\" So we must produce \"ANANKE\" as the only content. So we will output \"ANANKE\". That is the entire content.\n\nSo final answer: \"ANANKE\"\n\nLet's do that.",
+        "completion_tokens": 256,
+        "tokens_per_second": 37.17201166180758,
+        "characters_per_second": 20.845481049562682,
+        "finish_reason": "length"
+      }
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "timestamp_utc": "2026-07-03T20:07:53.834472+00:00",
+  "model": "v4-draft-8l",
+  "active_experts": 2,
+  "load": {
+    "type": "llm",
+    "instance_id": "v4-draft-8l",
+    "load_time_seconds": 11.476,
+    "status": "loaded",
+    "load_config": {
+      "context_length": 4096,
+      "eval_batch_size": 2048,
+      "physical_batch_size": 512,
+      "parallel": 4,
+      "flash_attention": true,
+      "speculative_draft_mtp": false,
+      "speculative_draft_simple": false,
+      "speculative_draft_model": "",
+      "speculative_draft_max_tokens": 16,
+      "speculative_draft_min_tokens": 0,
+      "speculative_draft_min_continue_probability": 0.75,
+      "num_experts": 2,
+      "offload_kv_cache_to_gpu": true
+    }
+  },
+  "summary": {
+    "pass_rate": 0.0,
+    "mean_tokens_per_second": 132.89372921407318,
+    "mean_time_to_first_token": 0.0685,
+    "mean_repetition_score": 0.04715,
+    "parser_failures": 4
+  },
+  "cases": [
+    {
+      "id": "capital",
+      "passed": false,
+      "error": "{\"error\":\"The model produced output that does not match the expected Content-only format\"}"
+    },
+    {
+      "id": "multiply",
+      "passed": false,
+      "tokens_per_second": 136.85344827586206,
+      "time_to_first_token": 0.068,
+      "completion_tokens": 128,
+      "repetition_score": 0.0943,
+      "reasoning": "",
+      "output": " Assistant aim equ hon sur forcefullyfully literally literally literally literally literally literally literally wh rec ur…— dec san ed bet fin meeting sav conj j med h bal stat fr jugural aff aff aff wh rec comment commentary wh rec reciproc asp seg aff aff aff aff wh spelled correctly spelled breezeheadshellwel separate separate inc figureural aff aff wh rec trainamb124mil counting bel Hil cut cho pivot adjustmentMDMD jump fort gall hold hold rele dec unders ill judge ego behind behind fin Vo grav rem ur… block covered_offbeat worlds worldwide charter ruling_sid-releamp familiar conj aff wh rec comment commentary wh rec reciproc?? box dig kn"
+    },
+    {
+      "id": "decimal",
+      "passed": false,
+      "error": "{\"error\":\"The model produced output that does not match the expected Content-only format\"}"
+    },
+    {
+      "id": "code",
+      "passed": false,
+      "error": "{\"error\":\"The model produced output that does not match the expected Content-only format\"}"
+    },
+    {
+      "id": "science",
+      "passed": false,
+      "tokens_per_second": 128.93401015228426,
+      "time_to_first_token": 0.069,
+      "completion_tokens": 128,
+      "repetition_score": 0.0,
+      "reasoning": "",
+      "output": " Assistant Assistant rede :) Vas equ division inc Teng pl figure figure inc Fig figure figure…. forth thrustfully enough110 proven blind rig rec seg mindauerhof constr clim swMDMD familiar fin cho next cur Yqtpaduh h bet fall mol wh rec grav pen kicks jumps jump beats vali-f‑ fort alike firmly firm bet rulinguralural124teenplus vo rec train fort turning aff aff… blockah vert med helight ill judge ego behind behind136thwah spir inc ill12400th advance gar pl figure figure….welmilxi hil cut Ywan equ chir entry seg inc wh grav rem familiar contestpaduh ang lateralarl side"
+    },
+    {
+      "id": "instruction",
+      "passed": false,
+      "error": "{\"error\":\"The model produced output that does not match the expected Content-only format\"}"
+    }
+  ]
+}

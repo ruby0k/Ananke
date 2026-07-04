@@ -1,0 +1,64 @@
+{
+  "timestamp_utc": "2026-07-02T13:49:31.520176+00:00",
+  "settings": {
+    "weights": "openai/gpt-oss-20b",
+    "active_experts": 2,
+    "max_new_tokens": 48,
+    "decoding": "greedy"
+  },
+  "custom": [
+    {
+      "id": "science",
+      "prompt": "Explain in one sentence why the daytime sky looks blue.",
+      "output": "Because shorter blue wavelengths of sunlight are scattered more efficiently by atmospheric molecules and aerosols than longer wavelengths, the sky is illuminated by a predominance of scattered blue light during the",
+      "raw_output": "<|channel|>analysis<|message|>Need to explain scattering.<|end|><|start|>assistant<|channel|>final<|message|>Because shorter blue wavelengths of sunlight are scattered more efficiently by atmospheric molecules and aerosols than longer wavelengths, the sky is illuminated by a predominance of scattered blue light during the",
+      "tokens": 48,
+      "tokens_per_second": 0.7288754636777358,
+      "reasoning": "Need to explain scattering."
+    },
+    {
+      "id": "arithmetic",
+      "prompt": "Which is larger, 9.11 or 9.9? Answer with only the larger value.",
+      "output": "9.9",
+      "raw_output": "<|channel|>analysis<|message|>We need to compare 9.11 vs 9.9. 9.9 is larger. Provide only the larger value. So answer: 9.9.<|end|><|start|>assistant<|channel|>final<|message|>9.9<|return|>",
+      "tokens": 48,
+      "tokens_per_second": 0.7808946954555417,
+      "reasoning": "We need to compare 9.11 vs 9.9. 9.9 is larger. Provide only the larger value. So answer: 9.9."
+    },
+    {
+      "id": "code",
+      "prompt": "Write a one-line Python function named is_even that returns whether n is even.",
+      "output": "```python\ndef is_even(n): return n % 2 == 0\n```",
+      "raw_output": "<|channel|>analysis<|message|>Need to output a one-liner function. Probably lambda or def with single return. Provide code.<|end|><|start|>assistant<|channel|>final<|message|>```python\ndef is_even(n): return n % 2 == 0\n```<|return|>",
+      "tokens": 48,
+      "tokens_per_second": 0.46616955394315845,
+      "reasoning": "Need to output a one-liner function. Probably lambda or def with single return. Provide code."
+    }
+  ],
+  "lm_studio": [
+    {
+      "id": "science",
+      "prompt": "Explain in one sentence why the daytime sky looks blue.",
+      "output": "Because shorter‑wavelength (blue) light from the Sun is scattered much more efficiently by atmospheric molecules than longer",
+      "reasoning": "We need to explain in one sentence. Provide concise explanation referencing Rayleigh scattering.",
+      "tokens": 48,
+      "tokens_per_second": 28.519417475728158
+    },
+    {
+      "id": "arithmetic",
+      "prompt": "Which is larger, 9.11 or 9.9? Answer with only the larger value.",
+      "output": "9.",
+      "reasoning": "We need to output just the larger value. Compare 9.11 vs 9.9. Obviously 9.9 is larger. So answer: 9.9.",
+      "tokens": 48,
+      "tokens_per_second": 28.26217678893566
+    },
+    {
+      "id": "code",
+      "prompt": "Write a one-line Python function named is_even that returns whether n is even.",
+      "output": "```python\ndef is_even(n): return n",
+      "reasoning": "Need to return boolean quickly. Provide lambda? But function name is_even. So def is_even(n): return n%2==0.",
+      "tokens": 48,
+      "tokens_per_second": 28.976572133168926
+    }
+  ]
+}

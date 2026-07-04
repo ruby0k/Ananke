@@ -1,0 +1,10 @@
+{
+  "version": "v20",
+  "base": "openai/gpt-oss-20b",
+  "active_experts": 2,
+  "context_length": 262144,
+  "rope_type": "yarn",
+  "rope_factor": 64.0,
+  "original_context_length": 4096,
+  "weight_change": false
+}

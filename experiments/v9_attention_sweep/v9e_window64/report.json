@@ -1,0 +1,50 @@
+{
+  "model": "v9e-window64",
+  "smoke_pass_rate": 0.5,
+  "mean_tokens_per_second": 33.3396573513583,
+  "cases": [
+    {
+      "id": "capital",
+      "passed": true,
+      "tokens_per_second": 33.42968850114953,
+      "output": "<|start|>atticary?<|start|>final<|message|>Paris"
+    },
+    {
+      "id": "multiply",
+      "passed": true,
+      "tokens_per_second": 34.52851149933524,
+      "output": "<|start|>answer322? Actually wait, check: 17 * 19 = 323. Yes correct. So answer is 323.<|start|>answer<|channel|>final <|constrain|>321? No, it's 323.<|start|>answer<|channel|>final 323"
+    },
+    {
+      "id": "decimal",
+      "passed": true,
+      "tokens_per_second": 33.990871288003724,
+      "output": "<|start|>final<|message|>9.9"
+    },
+    {
+      "id": "code",
+      "passed": false,
+      "tokens_per_second": 32.954251744636856,
+      "output": ""
+    },
+    {
+      "id": "science",
+      "passed": false,
+      "tokens_per_second": 32.72167329654818,
+      "output": ""
+    },
+    {
+      "id": "instruction",
+      "passed": false,
+      "tokens_per_second": 32.412947778476266,
+      "output": "<|start|>assentANANKE"
+    }
+  ],
+  "context": {
+    "passed": true,
+    "output": "<|start|>final<|message|>ORCHID-7319",
+    "prompt_tokens": 3174,
+    "time_to_first_token": 3.001,
+    "tokens_per_second": 26.894683072675875
+  }
+}

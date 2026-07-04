@@ -7,6 +7,7 @@ import torch
 from safetensors import safe_open
 from safetensors.torch import load_file
 from torch import nn
+from transformers import GptOssForCausalLM
 
 
 MODEL_CACHE = Path.home() / ".cache/huggingface/hub/models--openai--gpt-oss-20b/snapshots"
@@ -34,6 +35,32 @@ class Config:
         return cls(**{name: raw[name] for name in cls.__dataclass_fields__})
 
 
+@dataclass(frozen=True)
+class ArchitectureOptions:
+    expert_mode: str = "top2"
+    expert_confidence: float = 0.8
+    layer_skip_threshold: float = 0.05
+
+
+def active_expert_count(logits: torch.Tensor, options: ArchitectureOptions) -> int:
+    if options.expert_mode == "top2":
+        return 2
+    if options.expert_mode != "adaptive":
+        raise ValueError(f"unknown expert mode: {options.expert_mode}")
+    top2_mass = logits.softmax(-1).topk(2, dim=-1).values.sum(-1).mean()
+    return 2 if top2_mass >= options.expert_confidence else 4
+
+
+def active_layer_mask(relative_changes: list[float], threshold: float) -> list[bool]:
+    """Select a stable per-prompt layer mask; generation reuses it so KV caches stay aligned."""
+    active = [change >= threshold for change in relative_changes]
+    active[0] = active[-1] = True
+    for index in range(1, len(active)):
+        if not active[index - 1] and not active[index]:
+            active[index] = True
+    return active
+
+
 class RMSNorm(nn.Module):
     def __init__(self, config: Config, device: str):
         super().__init__()
@@ -58,16 +85,19 @@ class Attention(nn.Module):
 
 
 class Router(nn.Module):
-    def __init__(self, config: Config, device: str):
+    def __init__(self, config: Config, options: ArchitectureOptions, device: str):
         super().__init__()
-        self.top_k = config.num_experts_per_tok
+        self.options = options
+        self.last_active_experts = 2
         self.weight = nn.Parameter(
             torch.empty(config.num_local_experts, config.hidden_size, dtype=torch.bfloat16, device=device)
         )
         self.bias = nn.Parameter(torch.empty(config.num_local_experts, dtype=torch.bfloat16, device=device))
 
     def forward(self, x: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor]:
-        scores, indices = torch.topk(nn.functional.linear(x, self.weight, self.bias), self.top_k, dim=-1)
+        logits = nn.functional.linear(x, self.weight, self.bias)
+        self.last_active_experts = active_expert_count(logits, self.options)
+        scores, indices = torch.topk(logits, self.last_active_experts, dim=-1)
         return nn.functional.softmax(scores, dim=-1), indices
 
 
@@ -100,39 +130,45 @@ class PackedExperts(nn.Module):
 
 
 class MLP(nn.Module):
-    def __init__(self, config: Config, device: str):
+    def __init__(self, config: Config, options: ArchitectureOptions, device: str):
         super().__init__()
-        self.router = Router(config, device)
+        self.router = Router(config, options, device)
         self.experts = PackedExperts(config, device)
 
 
 class Block(nn.Module):
-    def __init__(self, config: Config, device: str):
+    def __init__(self, config: Config, options: ArchitectureOptions, device: str):
         super().__init__()
         self.input_layernorm = RMSNorm(config, device)
         self.self_attn = Attention(config, device)
-        self.mlp = MLP(config, device)
+        self.mlp = MLP(config, options, device)
         self.post_attention_layernorm = RMSNorm(config, device)
 
 
 class Backbone(nn.Module):
-    def __init__(self, config: Config, device: str):
+    def __init__(self, config: Config, options: ArchitectureOptions, device: str):
         super().__init__()
         self.embed_tokens = nn.Embedding(
             config.vocab_size, config.hidden_size, device=device, dtype=torch.bfloat16
         )
-        self.layers = nn.ModuleList([Block(config, device) for _ in range(config.num_hidden_layers)])
+        self.layers = nn.ModuleList([Block(config, options, device) for _ in range(config.num_hidden_layers)])
         self.norm = RMSNorm(config, device)
 
 
 class Ananke(nn.Module):
-    def __init__(self, config: Config, device: str = "meta"):
+    def __init__(self, config: Config, options: ArchitectureOptions | None = None, device: str = "meta"):
         super().__init__()
         self.config = config
-        self.model = Backbone(config, device)
+        self.options = options or ArchitectureOptions()
+        self.model = Backbone(config, self.options, device)
         self.lm_head = nn.Linear(
             config.hidden_size, config.vocab_size, bias=False, device=device, dtype=torch.bfloat16
         )
+
+
+class ExecutableAnanke(GptOssForCausalLM):
+    """Runnable Ananke surface using the canonical GPT-OSS kernels and cache implementation."""
+
 
 
 def snapshot_path(path: Path | None = None) -> Path:
@@ -183,10 +219,17 @@ def main() -> None:
     parser.add_argument("--checkpoint", type=Path)
     parser.add_argument("--materialize", action="store_true")
     parser.add_argument("--device", default="cpu")
+    parser.add_argument("--expert-mode", choices=("top2", "adaptive"), default="top2")
+    parser.add_argument("--expert-confidence", type=float, default=0.8)
+    parser.add_argument("--layer-skip-threshold", type=float, default=0.05)
     args = parser.parse_args()
     snapshot = snapshot_path(args.checkpoint)
-    model = Ananke(Config.load(snapshot / "config.json"))
+    options = ArchitectureOptions(args.expert_mode, args.expert_confidence, args.layer_skip_threshold)
+    model = Ananke(Config.load(snapshot / "config.json"), options)
     verify(model, snapshot)
+    assert active_expert_count(torch.tensor([[10.0, 0.0, 0.0, 0.0]]), ArchitectureOptions("adaptive", 0.8)) == 2
+    assert active_expert_count(torch.zeros(1, 4), ArchitectureOptions("adaptive", 0.8)) == 4
+    assert active_layer_mask([1.0, 0.01, 0.01, 1.0], 0.05) == [True, False, True, True]
     if args.materialize:
         materialize(model, snapshot, args.device)
 
